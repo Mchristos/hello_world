@@ -3,9 +3,8 @@ At some point, you may want to make your python module(s) available as a package
 
 First, put your source code in a folder with the name of the package (`helloworld`). In the same directory, write a `setup.py` file with the following structure: 
 
-  from setuptools import setup
-
-  setup(name='helloworld',
+    from setuptools import setup
+    setup(name='helloworld',
         version='0.1',
         description='A trivial hello world package for learning how to make a pip-installable python package',
         url='http://github.com/Mchristos/hello_world',
@@ -16,4 +15,4 @@ First, put your source code in a folder with the name of the package (`helloworl
         
 Now you can use the following pip command to install your package. 
 
-  pip install . 
+    pip install . 
