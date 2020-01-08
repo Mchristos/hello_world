@@ -1,7 +1,11 @@
 from setuptools import setup
 
 setup(
-    name='Hello World',
+    name='hello-world',
     version='1.0',
-    description='A trivial hello world package for learning how to make a pip package'
+    description='A trivial hello world package for learning how to make a pip-installable python package',
+    url='https://github.com/Mchristos/hello_world'
+    author='mChristos'
+    license='MIT'
+    packages=['hello-world']
 )
