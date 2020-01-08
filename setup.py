@@ -6,5 +6,6 @@ setup(
     description='A trivial hello world package for learning how to make a pip-installable python package',
     url='https://github.com/Mchristos/hello_world',
     author='mChristos',
-    license='MIT',
+    packages=['helloworld'],
+    license='MIT'
 )
