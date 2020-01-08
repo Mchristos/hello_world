@@ -15,4 +15,12 @@ First, put your source code in a folder with the name of the package (`helloworl
         
 Now you can use the following pip command to install your package. 
 
-    pip install . 
+    pip install .
+The same statement with a `-e` flag makes changes in the source code immediately available on importing the package
+
+    pip install -e . 
+    
+Now, your package is available on your system. In your python console, test it by doing:
+
+    >>> from helloworld import hello_world
+    >>> hello_world.hello_world()
