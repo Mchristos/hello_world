@@ -1,5 +1,7 @@
 # How to package your python code
-At some point, you may want to make your python module(s) available as a package. Suppose you have a module called `hello_world` which has a function called `hello_world()`, which just writes "Hello world!" to the console. Lets make it available as a pip package called `helloworld`. 
+At some point, you may want to make your python module(s) available as a package. Let's take the most simple possible package, with only one function `hello_world()` which just writes "Hello world!" to the console. Lets make it available as a pip package called `helloworld`. 
+
+## Make your code pip-installable from source
 
 First, put your source code in a folder with the name of the package (`helloworld`). In the same directory, write a `setup.py` file with the following structure: 
 
@@ -13,6 +15,8 @@ First, put your source code in a folder with the name of the package (`helloworl
         packages=['helloworld'],
         zip_safe=False)
         
+In this case we just put our hello world function in a file called `__init__.py` inside the `helloworld` directory. 
+        
 Now you can use the following pip command to install your package. 
 
     pip install .
@@ -22,5 +26,6 @@ The same statement with a `-e` flag makes changes in the source code immediately
     
 Now, your package is available on your system. In your python console, test it by doing:
 
-    >>> from helloworld import hello_world
-    >>> hello_world.hello_world()
+    >>> import helloworld
+    >>> helloworld.hello_world()
+    ### Hello world!
